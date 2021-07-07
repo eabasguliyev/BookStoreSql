@@ -1,0 +1,13 @@
+INSERT INTO genres(genre_name) VALUES('Fantasy'),
+('Adventure'),
+('Romance'),
+('Contemporary'),
+('Dystopian'),
+('Mystery'),
+('Horror'),
+('Thriller'),
+('Historical fiction'),
+('Science Fiction'),
+('Art'),
+('Self-help / Personal'),
+('Motivational');
