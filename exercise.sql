@@ -28,6 +28,17 @@ GROUP BY customers.first_name, customers.last_name;
 
 -- endirimi 15% den artiq olan mueyyen yazichi terefinden kitablari alan mushterilerin siyahisi
 
+SELECT DISTINCT(CONCAT_WS(' ', customers.first_name, customers.last_name)) AS fullname FROM customers
+INNER JOIN orders ON orders.customer_id = customers.id
+INNER JOIN books ON books.id = orders.book_id
+INNER JOIN authors ON authors.id = books.author_id
+WHERE CONCAT_WS(' ', authors.first_name, authors.last_name) = 'Lulita Biles' AND
+customers.discount > 15
+ORDER BY fullname;
+
+SELECT * FROM authors;
+
+
 -- Adi 'A' ile bashlayan bu il hefte sonuna ad gunu dushen 3 aydan artiq mushterimiz olan mushterilerin aldigi
 -- kitablarin neshriyyatlari 
 
